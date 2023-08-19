@@ -9,7 +9,12 @@ func create_grid():
 
 func create_places(num_to_create: int):
 	for i in num_to_create:
-		Global.game_data.grid.places.append(Place.new())
+		grid.places.append(Place.new())
+
+
+func create_subways():
+	for i in 1:
+		grid.subways.append(Subway.new())
 
 
 func _init():
