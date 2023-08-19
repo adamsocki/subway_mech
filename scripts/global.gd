@@ -2,6 +2,7 @@ extends Node
 # GLOBAL.GD
 
 var game
+var game_ui
 var game_manager
 var game_data
 
@@ -21,6 +22,9 @@ var game_data
 func _ready():
 	game = load("res://scenes/game.tscn").instantiate()
 	add_child(game)
+	game_ui = load("res://scenes/ui.tscn").instantiate()
+	add_child(game_ui)
+	
 	
 	
 	game_data = GameData.new()

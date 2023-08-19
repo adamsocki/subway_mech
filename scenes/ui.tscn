@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://clymwfyvc6qw1"]
+
+[node name="ui" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+offset_left = 164.0
+offset_top = 111.0
+offset_right = 204.0
+offset_bottom = 151.0
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.345098, 0.345098, 0.345098, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

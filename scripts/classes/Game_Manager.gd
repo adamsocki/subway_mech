@@ -15,7 +15,8 @@ func _init():
 
 	
 	grid_manager.add_grid_display_to_global_game()
-
+	grid_manager.set_up_display()
+	
 #	var node = get_parent()
 #	var game = $Game
 #	print(game)
