@@ -14,12 +14,19 @@ var game_data
 
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	game_data = GameData.new()
 	game_data.create_grid()
 	game_data.create_places(Global.places_to_init)
 	game_data.create_subways()
+	
+	
+	for i in game_data.grids[game_data.current_grid].subways:
+		for j in i.places_along_subway:
+			print(j["place"].place_name)
+			
 	
 	game_manager = GameManager.new()
 

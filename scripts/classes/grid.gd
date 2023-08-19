@@ -33,7 +33,13 @@ func sort_places_pop_high_to_low():
 #	for i in station_list.size():
 #		print(station_list[i].nearby_population)
 
+
+
+
 func _init():
 	grid_size.x = Global.grid_init_size.x
 	grid_size.y = Global.grid_init_size.y
 	
+
+func get_places_pop_sort() -> Array:
+	return places_pop_sort.duplicate()
