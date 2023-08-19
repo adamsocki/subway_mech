@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmd0po7ewyhyx"]
+
+[ext_resource type="Script" path="res://scripts/global.gd" id="1_ubj3g"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_ubj3g")
+grid_init_size = Vector2(100, 100)
+places_to_init = 12
