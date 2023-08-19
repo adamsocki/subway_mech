@@ -12,3 +12,4 @@ func update_game_manager(delta):
 
 func _init():
 	grid_manager = GridManager.new()
+	
