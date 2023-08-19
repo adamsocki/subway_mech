@@ -1,5 +1,5 @@
 extends Node
-
+# GLOBAL.GD
 
 var game
 var game_manager
@@ -10,6 +10,8 @@ var game_data
 @export var places_to_init : int
 
 
+@export var root : Node
+
 
 
 
@@ -17,18 +19,29 @@ var game_data
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	game = load("res://scenes/game.tscn").instantiate()
+	add_child(game)
+	
+	
 	game_data = GameData.new()
 	game_data.create_grid()
 	game_data.create_places(Global.places_to_init)
 	game_data.create_subways()
 	
 	
-	for i in game_data.grids[game_data.current_grid].subways:
-		for j in i.places_along_subway:
-			print(j["place"].place_name)
+#	for i in game_data.grids[game_data.current_grid].subways:
+#		for j in i.places_along_subway:
+#			print(j["place"].place_name)
 			
 	
+	
+	
 	game_manager = GameManager.new()
+	
+	
+#	game = load("res://scenes/game.tscn")
+#	game.intantiate()
+#	add_child(game)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

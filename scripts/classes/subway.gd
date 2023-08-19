@@ -3,6 +3,7 @@ class_name Subway
 
 var places_along_subway = []
 
+var segments_along_subway = []
 
 
 func create_new_subway():
@@ -32,17 +33,38 @@ func create_new_subway():
 	pop_pair = greatest_pair.duplicate()
 	
 	var station_1 = {
-		"seq": 0,
+		"stop": 0,
 		"place": greatest_pair[0]
 	}
 	places_along_subway.append(station_1)
 	
 	var station_2 = {
-		"seq": 1,
+		"stop": 1,
 		"place": greatest_pair[1]
 	}
 	places_along_subway.append(station_2)
 	
+	
+	var segment_1 = {
+		"seg": 1,
+		"distance": greatest_distance
+	}
+	segments_along_subway.append(segment_1)
+	
+	
+
+
+func add_station():
+	if segments_along_subway != null:
+		
+		# find if any stations are within x and y of segment
+		pass
+		
+		
+	pass
+
+
 
 func _init():
 	create_new_subway()
+	add_station()
