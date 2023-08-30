@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://clymwfyvc6qw1"]
+[gd_scene load_steps=2 format=3 uid="uid://clymwfyvc6qw1"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_0eu01"]
 
 [node name="ui" type="CanvasLayer"]
+script = ExtResource("1_0eu01")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -36,3 +39,20 @@ offset_right = 115.0
 offset_bottom = 51.0
 text = "View map
 "
+
+[node name="grid_display" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 493.0
+offset_top = 284.0
+offset_right = 533.0
+offset_bottom = 324.0
+
+[node name="ColorRect" type="ColorRect" parent="grid_display"]
+layout_mode = 0
+offset_left = -81.0
+offset_top = -29.0
+offset_right = 321.0
+offset_bottom = 185.0
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

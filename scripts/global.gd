@@ -5,7 +5,7 @@ var game
 var game_ui
 var game_manager
 var game_data
-
+var grid_display
 
 @export var grid_init_size : Vector2
 @export var places_to_init : int
@@ -24,7 +24,8 @@ func _ready():
 	add_child(game)
 	game_ui = load("res://scenes/ui.tscn").instantiate()
 	add_child(game_ui)
-	
+	grid_display = load("res://scenes/grid_display.tscn").instantiate()
+	add_child(grid_display)
 	
 	
 	game_data = GameData.new()

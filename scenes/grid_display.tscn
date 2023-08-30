@@ -1,7 +1,6 @@
-[gd_scene format=3 uid="uid://b3dh433iv46h5"]
+[gd_scene format=3 uid="uid://b2g4fywknmamc"]
 
 [node name="grid_display" type="CanvasLayer"]
-visible = false
 
 [node name="Control" type="Control" parent="."]
 visible = false
@@ -13,7 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
